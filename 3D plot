@@ -1,5 +1,5 @@
-# this is matlab code for 3D plot
-% Define the range for r and t
+# Matlab code for 3D plot
+% Define the range for rainfall and temprature
 % t = 0:10:50;
 % r = 15:5:40;
 t=linspace(0,5,50);
