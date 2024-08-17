@@ -1,0 +1,30 @@
+# this is matlab code for 3D plot
+% Define the range for r and t
+% t = 0:10:50;
+% r = 15:5:40;
+t=linspace(0,5,50);
+r=linspace(15,10, 40);
+
+% Create a grid of r and t values
+[R, T] = meshgrid(r, t);
+
+% Define the function to plot
+%LambV = (3.375.*(4.*R.*(50-R).^(3)).^(3).*exp(-0.00554.*T+0.06737))./(50^6+(2+(0.00554.*T-0.06737).^(-1)));
+muv = 0.0886.*exp(((-0.01*T+1.01*T-21.211)./(14.852)).^2);
+% Create a new figure
+figure;
+
+% Plot the 3D surface
+%surf(R, T, LambV);
+surf(R, T, muv);
+
+
+% Add labels and title
+xlabel('Temprature');
+ylabel('Rainfall');
+%zlabel('\Lambda_v');
+zlabel('\mu_v');
+title('3D Plot of recruitment rate');
+
+% Add grid
+grid on;
